@@ -1,0 +1,43 @@
+.underline-dark-blue-on-hover {
+  position: relative;
+  display: inline-block;
+  margin: 0.2rem;
+}
+.underline-dark-blue-on-hover::after {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  left: 0;
+  height: 2px;
+  background: #6754E9;
+  transition: width 0.5s ease;
+}
+.underline-dark-blue-on-hover:hover::after {
+  width: 100%;
+}
+
+.underline-light-blue-on-hover {
+  position: relative;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.underline-light-blue-on-hover::after {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  left: 0;
+  height: 2px;
+  background: #B0A7EF;
+  transition: width 0.5s ease;
+}
+
+.group:hover .underline-light-blue-on-hover::after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
