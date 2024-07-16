@@ -1,8 +1,11 @@
 import React from 'react'
-
+import HomeHeroSection from '../sections/HomeHeroSection'
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <HomeHeroSection/>
+    <section className='w-screen h-screen bg-white '></section>
+    </>
   )
 }
 

@@ -14,7 +14,7 @@ export default {
       },
       keyframes: {
         'slide-in': {
-          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '0%': { transform: 'translateY(-100%)', opacity: '1' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         'slide-out': {
@@ -25,6 +25,16 @@ export default {
       animation: {
         'slide-in': 'slide-in 0.5s ease-in-out forwards',
         'slide-out': 'slide-out 0.5s ease-in-out forwards',
+      },
+      backgroundImage: {
+        'pink-to-white-gradient': 'linear-gradient(#EDE9FF, white)',
+      },
+      backgroundColor:{
+        "brand-pink": "#EDE9FF",
+        "light-grey": "#F7F7FA"
+      },
+      lineHeight: {
+        '53': '53px',
       },
     },
   },

@@ -3,12 +3,22 @@ import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import { HoverArrowBtn } from "./Buttons";
 import { RxHamburgerMenu } from "react-icons/rx";
+import ScrollDetector from '../modules/scrollDetector'
 
 const Navbar = () => {
+  const scrollDirection = ScrollDetector()
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
+  let navAnimatationClass; 
+  if(scrollDirection == "down"){
+    navAnimatationClass = "bg-white animate-slide-out"
+  }else if(scrollDirection == "up"){
+    navAnimatationClass = "bg-white animate-slide-in bg-white "
+  }else if(scrollDirection == null){
+    navAnimatationClass = "bg-[transparent]"
+  }
+  
   return (
-    <nav className="flex items-center px-6 relative justify-between min-h-[4rem]">
+    <nav className={`duration-500 flex fixed w-screen top-0 items-center  px-6 justify-between min-h-[4rem]  ${navAnimatationClass }`}>
       <img
         src={logo}
         alt="Logo"
@@ -51,7 +61,7 @@ const Navbar = () => {
             Contact
           </NavLink>
         </div>
-        <HoverArrowBtn link="/audit" text="FREE AUDIT" />
+        <HoverArrowBtn link="/get-proposal" text="FREE AUDIT" />
       </div>
 
       <button
