@@ -9,7 +9,7 @@ const ScrollDetector = () => {
     const handleScroll = () => {
       let st = window.pageYOffset || document.documentElement.scrollTop;
       
-      if (st > lastScrollTop + 50) {
+      if (st > lastScrollTop) {
         setScrollDirection("down");
       } else if (st < lastScrollTop) {
         setScrollDirection("up");
