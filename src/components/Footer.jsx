@@ -223,7 +223,7 @@ const Footer = () => {
               <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="/refund">Refund Policy</Link>
             </div>
 
-            <div className="flex text-[1.5rem] justify-center gap-4 md:gap-0 md:justify-normal">
+            <div className="flex text-[1.5rem] justify-center gap-4 md:justify-normal">
               <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="https://www.instagram.com/anziandco/" target="_blank">
                 <FaInstagram />
               </Link>
