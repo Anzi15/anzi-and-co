@@ -33,6 +33,11 @@ export default {
         "brand-pink": "#EDE9FF",
         "light-grey": "#F7F7FA"
       },
+      colors:{
+        "brand-pink": "#EDE9FF",
+        "light-grey": "#F7F7FA",
+        "dark-blue":"#7563EA"
+      },
       lineHeight: {
         '53': '53px',
       },

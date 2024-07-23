@@ -1,5 +1,10 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { HoverArrowBtn } from "./Buttons";
 import SpaceDivider from "./SpaceDivider";
 import { Link } from "react-router-dom";
@@ -8,6 +13,7 @@ import metaPartners from "../assets/partner-logos/meta-partners.png";
 import googleCloud from "../assets/partner-logos/google-cloud.png";
 import shopifyPartners from "../assets/partner-logos/shopify-partner.png";
 import tiktokPartner from "../assets/partner-logos/tiktok-partner.png";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -30,10 +36,7 @@ const Footer = () => {
                 to="https://api.whatsapp.com/send?phone=923248226367&text=Hey,%20how%27s%20it%20going?%20well,%20i%20would%20like%20learn%20more%20about%20your%20solutions%20and%20how%20they%20could%20help%20my%20business%20grow?"
               >
                 <FaWhatsapp className="text-xl" />
-                <p
-                  className="text-xl font-semibold underline-dim-blue-on-hover"
-                 
-                >
+                <p className="text-xl font-semibold underline-dim-blue-on-hover">
                   +92 328226367
                 </p>
               </Link>
@@ -96,7 +99,146 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="navigation w-full min-h-[20rem] bg-light-grey rounded-t-[2rem]"></div>
+        <div className="navigation w-full min-h-[20rem] bg-light-grey rounded-t-[2rem] px-12 py-14 ">
+          <div className="w-full">
+            <h4 className="text-left font-bold w-full pb-5">SOLUTIONS</h4>
+
+            <div className="w-full pb-3 grid  gap-2 md:grid-cols-4">
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/ui-ux-design/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  UI/UX Design
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/web-development/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Web Development
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/social-media-marketing/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Social Media Marketing
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/search-engine-optimization/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit w-fit"
+                >
+                  Search Engine Optimization
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full justify-between grid md:grid-cols-4 gap-2">
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/brand-guideline/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Brand Guideline
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/mobile-development/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Mobile App Development
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/google-my-business/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Google Business Profile
+                </Link>
+              </div>
+              <div className="flex justify-start">
+                <Link
+                  to="/solutions/conversion-rate-optimization/"
+                  className="underline-dark-blue-on-hover text-[0.9rem] h-fit"
+                >
+                  Conversion Rate Optimization
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="my-8 ">
+            <hr />
+            <div className="py-8 md:px-4 w-full flex justify-between  flex-col md:flex-row">
+              <div className="w-full md:w-[42.1666666667%]  flex justify-between">
+
+                <Link className="underline-dark-blue-on-hover " to="/about-us">
+                  About
+                </Link>
+                <Link className="underline-dark-blue-on-hover " to="/blog">
+                  Blog
+                </Link>
+                <Link className="underline-dark-blue-on-hover " to="/careers">
+                  Careers
+                </Link>
+              </div>
+
+              <div className="w-full md:w-[42.1666666667%] flex justify-between">
+                <Link
+                  className="underline-dark-blue-on-hover"
+                  to="/meet-the-team"
+                >
+                  Team
+                </Link>
+                <Link
+                  className="underline-dark-blue-on-hover"
+                  to="/success-stories"
+                >
+                  Success Stories
+                </Link>
+                <Link className="underline-dark-blue-on-hover" 
+                to="/reviews">
+                  Reviews
+                </Link>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div className="pt-2 w-full flex justify-between flex-col-reverse md:flex-row gap-4 md:gap-0">
+            <p>© 
+              <span>
+                {(new Date().getFullYear())}
+              </span> Anzi &. CO</p>
+
+            <div className="flex gap-4">
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="/terms">Terms & Conditions</Link>
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="/privacy">Privacy Policy</Link>
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="/refund">Refund Policy</Link>
+            </div>
+
+            <div className="flex text-[1.5rem] justify-center gap-4 md:gap-0 md:justify-normal">
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="https://www.instagram.com/anziandco/" target="_blank">
+                <FaInstagram />
+              </Link>
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="https://x.com/anziandco" target="_blank">
+                <FaSquareXTwitter />
+              </Link>
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75">
+                <FaFacebook />
+              </Link>
+              <Link className="hover:text-dark-blue hover:scale-105 transition-all duration-75" to="https://linkedin.com/company/anziandco/" target="_blank">
+                <FaLinkedin />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
